@@ -1,17 +1,18 @@
 import * as React from 'react'
-import { Button, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './containers/Page/Home/Home'
+import Articles from './containers/Page/Articles/Articles'
 import Minox from './containers/Page/Minox/Minox'
 
-const Drawer = createDrawerNavigator()
+const Drawer = createNativeStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator useLegacyImplementation initialRouteName="Home">
         <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Articles" component={Articles} />
         <Drawer.Screen name="Minox" component={Minox} />
       </Drawer.Navigator>
     </NavigationContainer>

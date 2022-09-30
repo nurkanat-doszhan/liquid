@@ -1,12 +1,9 @@
-import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar'
 import { StyleSheet, View } from 'react-native'
-import { Button, Stack, Text } from "@react-native-material/core"
+import { Text } from "@react-native-material/core"
 
-export default function App({ navigation: { goBack } }) {
-
+export default function Minox() {
   return (
     <View style={styles.container}>
-      <Button onPress={() => goBack()} title="Go back" />
       <Text variant='h4' style={styles.h4}>Про миноксидил</Text>
       <Text variant="body2">Оптимальный курс миноксидила для бороды — 6 месяцев.
           В этом случае вероятность «отката» минимальна.</Text>
@@ -15,8 +12,6 @@ export default function App({ navigation: { goBack } }) {
           7-14 дней. Следующий этап — применение средства 1 раз в 2-3 дня.
           Постепенно увеличивайте интервал, пока он не дойдет до 7-10 дней.
           Тогда можно отменить миноксидил.</Text>
-      {/* <Button title="Go to Home" onPress={() => navigation.navigate('Home')} /> */}
-      <ExpoStatusBar />
     </View>
   );
 }
