@@ -6,7 +6,7 @@ const imgPath = '../../../assets'
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.text} variant='h5'>Мой персональный блог</Text>
+      <Text style={styles.text} variant='h5'>Мой персональный блог!</Text>
       <Image style={styles.img} width={250} source={require(`${imgPath}/images/autumn.png`)} />
       <Button
         style={styles.button}
